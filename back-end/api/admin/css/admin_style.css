@@ -173,6 +173,7 @@ tbody tr:hover {
     text-decoration: none;
     padding: 4px 10px;
     border-radius: 12px;
+    color: black;
  }
 .btn-save { background-color: var(--success-green); }
 .btn-delete { 
@@ -180,6 +181,7 @@ tbody tr:hover {
     padding: 4px 10px;
     border-radius: 12px;
     text-decoration: none;
+    color: black;
 }
 .btn-back { 
     background-color: #6c757d; 
