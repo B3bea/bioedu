@@ -1,0 +1,486 @@
+@import url('https://fonts.cdnfonts.com/css/open-sauce-one');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sauce One", sans-serif;
+}
+
+body{
+    background-color: #F8F8F8;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+/*login - inicio*/
+
+.voltar{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.imgSeta{
+    width: 60px;
+}
+.containerLogin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    background: rgb(46,116,184);
+    background: linear-gradient(90deg, rgba(46,116,184,1) 0%, rgba(112,165,230,1) 35%, rgba(224,226,242,1) 100%);
+}
+
+.lados{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    -webkit-box-shadow: 11px -8px 30px 9px rgba(0,0,0,0.28);
+    -moz-box-shadow: 11px -8px 30px 9px rgba(0,0,0,0.28);
+    box-shadow: 11px -8px 30px 9px rgba(0,0,0,0.28);
+    background-color: #5272ff92;
+}
+
+
+.lado1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+.lado2{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: #F8F8F8;
+    width: 50%;
+}
+
+.tituloEntrar{
+    text-align: center;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 0.5rem;
+}
+
+.form>input{
+    border-radius: 10px;
+    padding: 0.5rem;
+    border: 2px solid rgba(69, 68, 68, 0.443);
+}
+
+span {
+    color: rgb(36, 36, 36);
+    font-size: 12px;
+}
+
+.cbRemember{
+    display: flex;
+    flex-direction: row;
+    font-size: 13px;
+}
+
+.btn{
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: none;
+    margin: 0.5rem 0 0 0;
+    background-color: #5271FF;
+    color: white;
+    font-weight: bold;
+}
+
+.complementosLogin{
+    text-align: center;
+    font-size: 13px;
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+@media (max-width: 828px) {
+    .containerLogin {
+        padding: 20px;
+    }
+
+    .lados {
+        width: 100%;
+        flex-direction: column;
+        box-shadow: none; /* Ajuste conforme necessário */
+    }
+
+    .lado1, .lado2 {
+        width: 100%;
+    }
+
+    .lado2 {
+        padding: 1rem;
+    }
+
+    .tituloEntrar {
+        font-size: 1.5rem;
+    }
+
+    .form {
+        padding: 0.5rem;
+    }
+
+    .form > input {
+        font-size: 1rem;
+    }
+
+    .cbRemember {
+        font-size: 12px;
+    }
+
+    .btn {
+        font-size: 1rem;
+    }
+
+    .complementosLogin {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 769px){
+
+.voltar{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 20px;
+}
+
+.imgSeta{
+    width: 60px;
+}
+
+.containerLogin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: black;
+    background: rgb(46,116,184);
+    background: linear-gradient(90deg, rgba(46,116,184,1) 0%, rgba(112,165,230,1) 35%, rgba(224,226,242,1) 100%);
+}
+
+.lados{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    -webkit-box-shadow: 11px -8px 30px 9px rgba(0,0,0,0.28);
+    -moz-box-shadow: 11px -8px 30px 9px rgba(0,0,0,0.28);
+    box-shadow: 11px -8px 30px 9px rgba(0,0,0,0.28);
+    background-color: #5272ff92;
+}
+
+
+.lado1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+.lado2{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: #F8F8F8;
+    width: 50%;
+}
+
+.tituloEntrar{
+    text-align: center;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 0.5rem;
+}
+
+.form>input{
+    border-radius: 10px;
+    padding: 0.5rem;
+    border: 2px solid rgba(69, 68, 68, 0.443);
+}
+
+.cbRemember{
+    display: flex;
+    flex-direction: row;
+    font-size: 13px;
+}
+
+.btn{
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: none;
+    margin: 0.5rem 0 0 0;
+    background-color: #5271FF;
+    color: white;
+    font-weight: bold;
+}
+
+.complementosLogin{
+    text-align: center;
+    font-size: 13px;
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+}
+
+/* Media query para dispositivos com largura máxima de 768px */
+@media (max-width: 768px) {
+
+    .imgSeta{
+        width: 40px;
+    }
+
+    .containerLogin {
+        padding: 50px;
+    }
+
+    .lados {
+        width: 100%;
+        flex-direction: column;
+        box-shadow: none; /* Ajuste conforme necessário */
+    }
+
+    .lado1, .lado2 {
+        width: 100%;
+    }
+
+    .lado2 {
+        padding: 1rem;
+    }
+
+    .tituloEntrar {
+        font-size: 1.5rem;
+    }
+
+    .form {
+        padding: 0.5rem;
+    }
+
+    .form > input {
+        font-size: 1rem;
+    }
+
+    .cbRemember {
+        font-size: 12px;
+    }
+
+    .btn {
+        font-size: 1rem;
+    }
+
+    .complementosLogin {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 900px) {
+    .containerLogin {
+        padding: 20px;
+    }
+
+    .lados {
+        width: 100%;
+        flex-direction: column;
+        box-shadow: none; /* Ajuste conforme necessário */
+    }
+
+    .lado1, .lado2 {
+        width: 100%;
+    }
+
+    .lado2 {
+        padding: 1rem;
+    }
+
+    .tituloEntrar {
+        font-size: 1.5rem;
+    }
+
+    .form {
+        padding: 0.5rem;
+    }
+
+    .form > input {
+        font-size: 1rem;
+    }
+
+    .cbRemember {
+        font-size: 12px;
+    }
+
+    .btn {
+        font-size: 1rem;
+    }
+
+    .complementosLogin {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 769px){
+
+.voltar{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 20px;
+}
+
+.imgSeta{
+    width: 60px;
+}
+
+.containerLogin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: black;
+    background: rgb(46,116,184);
+    background: linear-gradient(90deg, rgba(46,116,184,1) 0%, rgba(112,165,230,1) 35%, rgba(224,226,242,1) 100%);
+}
+
+.lados{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    -webkit-box-shadow: 11px -8px 30px 9px rgba(0,0,0,0.28);
+    -moz-box-shadow: 11px -8px 30px 9px rgba(0,0,0,0.28);
+    box-shadow: 11px -8px 30px 9px rgba(0,0,0,0.28);
+    background-color: #5272ff92;
+}
+
+
+.lado1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+.lado2{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: #F8F8F8;
+    width: 50%;
+}
+
+.tituloEntrar{
+    text-align: center;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 0.5rem;
+}
+
+.form>input{
+    border-radius: 10px;
+    padding: 0.5rem;
+    border: 2px solid rgba(69, 68, 68, 0.443);
+}
+
+.cbRemember{
+    display: flex;
+    flex-direction: row;
+    font-size: 13px;
+}
+
+.btn{
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: none;
+    margin: 0.5rem 0 0 0;
+    background-color: #5271FF;
+    color: white;
+    font-weight: bold;
+}
+
+.complementosLogin{
+    text-align: center;
+    font-size: 13px;
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+}
+
+/* Media query para dispositivos com largura máxima de 768px */
+@media (max-width: 768px) {
+
+    .imgSeta{
+        width: 30px;
+    }
+
+    .containerLogin {
+        padding: 50px;
+    }
+
+    .lados {
+        width: 100%;
+        flex-direction: column;
+        box-shadow: none; /* Ajuste conforme necessário */
+    }
+
+    .lado1, .lado2 {
+        width: 100%;
+    }
+
+    .lado2 {
+        padding: 1rem;
+    }
+
+    .tituloEntrar {
+        font-size: 1.5rem;
+    }
+
+    .form {
+        padding: 0.5rem;
+    }
+
+    .form > input {
+        font-size: 1rem;
+    }
+
+    .cbRemember {
+        font-size: 12px;
+    }
+
+    .btn {
+        font-size: 1rem;
+    }
+
+    .complementosLogin {
+        font-size: 12px;
+    }
+}

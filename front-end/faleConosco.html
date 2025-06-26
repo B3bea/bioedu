@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../favicon_io/favicon-16x16.png">  
+    <link rel="stylesheet" href="./css/styleFaleConosco.css">
+    <title>Fale Conosco - BIOEDU</title>
+</head>
+<body>
+
+    <section class="banner">
+        <img src="./imagens/plano de fundo-contato.jpg" alt="Um fundo de gradiente do preto para o azul">
+    </section>   
+
+    <a href="./index.html"><img class="logo" src="./imagens/LOGO - BIOEDU - BRANCO ESCRITO.png" alt="Logo BioEdu"></a>
+    
+    <header>
+
+        <nav class="nav">
+
+            <button class="hamburger"></button>
+
+            <ul class="menu1">
+
+                <li><a href="./index.html">INÍCIO</a></li>
+                
+                <li><a href="./sobreNos.html">SOBRE NÓS</a></li>
+                
+                <li><a href="./bioedu.html">BIOEDU</a></li>
+
+                <li><a href="./faleConosco.html">FALE CONOSCO</a></li>
+            </ul>
+
+            <a href="./login.html"><img class="imgLogin" src="./imagens/login.png" alt="Ícone de login" width="48px"></a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="tituloBioEdu">
+            <h1>Fale Conosco</h1>
+            <p>Alguma dúvida? Entre em contato conosco preenchendo o formulário abaixo.</p>
+        </div>
+
+        <div class="container">
+            <form class="formContato" method="POST" action="contato">
+
+                <!-- <label> é como se fosse um <p> só que funciona melhor com formulários. -->
+                <label for="camponome">Nome Completo:</label>
+                <!-- <input type="text"> define o tipo de entrada que o usuário vai por, nesse caso de texto. name="" indica o nome que será puxado pelo servidor. placeholder="" o texto permanece até que o usuário intereja com a caixa de texto. required deixa o campo obrigatório -->
+                <input id="camponome" type="text" name="nomecompleto" placeholder="Por favor, digite seu nome completo" required>
+
+                <label for="campocidade">Cidade de Origem:</label>
+                <input id="campocidade" type="text" name="campocidade" placeholder="Por favor, digite a sua cidade de origem.">
+
+                <label for="campotelefone">Telefone para contato:</label>
+                <input id="campotelefone" type="tel" name="campotelefone" placeholder="Por favor, digite seu telefone com DDD" required>
+
+                <label for="campoemail">E-mail para contato:</label>
+                <input id="campoemail" type="email" name="campoemail" placeholder="Por favor, digite o seu e-mail" required>
+
+                <label for="campomensagem">Mensagem:</label>
+                <!-- <textarea> possibilita quebra de linha na escrita do texto -->
+                <textarea id="campomensagem" name="campomensagem" placeholder="Por favor, digite aqui a sua mensagem" required></textarea>
+
+                <div class="paiBotao">
+                    <input id="botaoEnviar" type="submit" value="Enviar">
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="contato">
+            <h4>Contato</h4> <br><br>
+
+           <div class="email">
+                <img src="./imagens/email.png" alt="Ícone de email" width="4%">
+                <p>Email: bioedu@gmail.com.br</p>
+           </div>
+
+           <div class="telefone">
+                <img src="./imagens/phone-call.png" alt="Ícone de um telefone" width="4%">
+                <p>Telefone: (16) 1234-5678</p>
+           </div>
+
+           <div class="facebook">
+                <img src="./imagens/facebook.png" alt="Ícone do Facebook" width="4%">
+                <p>BIOEDU</p>
+           </div>
+
+            <div class="instagram">
+                <img src="./imagens/instagram.png" alt="Ícone do Instagram" width="4%">
+                <p>@bioedu_ed</p>
+            </div>
+
+            <div class="whatsapp">
+                <img src="./imagens/whatsapp.png" alt="Ícone do Whatsapp" width="4%">
+                <p>(16) 12345-6789</p>
+            </div>
+        </div>
+
+        <div class="endereco">
+            <h4>Endereço</h4>
+                <p>Av. Dr. Flávio Henrique,</p>
+
+                <p>Av. Dr. Flávio Henrique Lemos, 585</p>
+
+                <p>Portal Itamaracá</p>
+
+                <p>Taquaritinga - SP, 15900</p>
+        </div>
+
+        <div class="politica">
+            <h4>Política de Privacidade</h4>
+
+            <div>
+                <p>Todos os direitor reservados.</p>
+
+                <p>&copy; Copyright 2024, BIOEDU</p>
+            </div>
+        </div>
+    </footer>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+</body>
+
+<script src="./js/script.js"></script>
+</html>

@@ -1,0 +1,455 @@
+@import url('https://fonts.cdnfonts.com/css/open-sauce-one');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sauce One", sans-serif;
+}
+
+body{
+    background-color: #F8F8F8;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+/*index*/
+
+/*header*/
+.banner img{
+    display: block;
+    width: 100%;    
+}
+
+/*menu1*/
+a {
+    text-decoration: none;
+}
+
+header{
+    padding-inline: 16px;
+    z-index: 1000;
+    top: 40px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 10px;
+}
+
+.nav{
+    max-width: 1280px;
+    height: 70px;
+    margin-inline: auto;
+
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.logo{
+    width: 6rem;
+    z-index: 1;
+    top: 35px;
+    position: absolute;
+    left: 10px;
+}
+
+.menu1{
+    display: flex;
+    gap: 32px;
+    list-style: none;
+}
+
+.menu1 a{
+    font-size: 20px;
+    color: #fff;
+    padding-block: 16px;
+}
+
+.hamburger {
+    display: none; /* Escondido por padrão em telas grandes */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001; /* Garante que o botão fique acima de outros elementos */
+}
+
+.hamburger span {
+    width: 2rem;
+    height: 0.25rem;
+    background: #ffffff; /* Cor das linhas do hambúrguer */
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+}
+
+/* Animação do botão para se tornar um "X" quando aberto */
+.hamburger.open span:nth-child(1) {
+    transform: rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(20px);
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+/*fim menu1*/
+
+
+.tituloBioEdu {
+    position: absolute;
+    color: white;
+    left: 4%;
+    top: 38%;
+    width: 50%;
+}
+
+.tituloBioEdu h1{
+    font-family: "Russo One", sans-serif;
+    font-size: 100px;
+}
+
+.tituloBioEdu p{
+    font-size: 28px;
+}
+
+.btnMais{
+    margin-top: 3rem;
+    padding: 0.8rem 2rem 0.8rem 2rem;
+    background-color: #5271FF;
+    border: none;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/*fim header*/
+
+/*começo - fale conosco*/
+
+.container{
+    margin-top: 4rem;
+}
+.formContato label, .formContato input, .formContato textarea {
+    width: 100%;
+    display: block;
+}
+
+.formContato textarea {
+    height: 10rem;
+    resize: none;
+    border-radius: 0.5rem;
+    color: rgb(0, 0, 0);
+    border: 0.1rem solid rgb(220, 220, 220);
+    transition: border 0.5s;
+    padding: 1rem;
+}
+
+.formContato textarea:focus{
+    border: 0.1rem solid rgba(29, 34, 132, 0.769);
+    outline: none;
+}
+
+.formContato input {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    color: rgb(0, 0, 0);
+    border: 0.1rem solid rgb(220, 220, 220);
+    transition: border 0.5s;
+}
+
+.formContato input:focus{
+    border: 0.1rem solid rgba(29, 34, 132, 0.769);
+    outline: none;
+}
+
+.formContato{
+    width: 50rem;
+    max-width: 90%;
+    margin: 0 auto;
+}
+#botaoEnviar {
+    display: inline-block;
+    width: auto;
+    margin: 1rem 0 0 0;
+    cursor: pointer;
+    background-color: rgb(16, 16, 101);
+    color: white;
+    transition: background 0.5s;
+}
+
+#botaoEnviar:hover{
+    background-color: rgb(34, 34, 188);
+}
+
+.formContato label{
+    margin: 1rem 0 0.3rem 0;
+}
+
+.paiBotao{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 4rem;
+}
+
+/*fim - faleconosco*/
+
+/*rodape*/
+footer{
+    display: flex;
+    align-items: center;
+    background: rgb(1,0,13);
+    background: linear-gradient(90deg, rgba(1,0,13,1) 0%, rgba(9,9,121,1) 35%, rgba(55,0,255,1) 100%);
+}
+
+.contato{
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    color: white;
+    margin-left: 6rem;
+}
+
+.contato h4{
+    margin-left: 5rem;
+    margin-top: 2rem;
+}
+
+.email, .telefone, .facebook, .instagram, .whatsapp{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.endereco{
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    color: white;
+   text-align: center;
+   margin-right: 3rem;
+}
+
+.endereco h4{
+    margin-bottom: 2.5rem;
+}
+
+.endereco p{
+    margin-bottom: 1rem;
+}
+
+.politica{
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    color: white;
+    text-align: center;
+}
+
+.politica h4{
+    margin-bottom: 3rem;
+}
+
+.politica p{
+    margin-bottom: 1rem;
+}
+
+/*fim rodape*/
+
+@media screen and (max-width: 1200px) {
+    
+    .tituloBioEdu {
+        top: 34%;
+    }
+
+    .tituloBioEdu h1{
+        font-size: 80px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .tituloBioEdu {
+        top: 30%;
+    }
+
+    .tituloBioEdu h1{
+        font-size: 70px;
+    }
+
+    .tituloBioEdu p{
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    
+    .tituloBioEdu {
+        top: 28%;
+    }
+
+    .tituloBioEdu h1{
+        font-size: 60px;
+    }
+
+    .tituloBioEdu p{
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .hamburger {
+        display: flex !important;
+        position: fixed; /* Fixa o botão na tela */
+        top: 20px;
+        right: 20px;
+    }
+
+    /* Esconde o menu de navegação da forma tradicional */
+    .nav .menu1 {
+        /* Posicionamento e Estilo do Menu Mobile */
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh; /* Altura total da tela */
+        width: 60%; /* Largura do menu */
+        max-width: 250px;
+        background-color: rgba(15, 23, 42, 0.95); /* Fundo semi-transparente */
+        backdrop-filter: blur(5px); /* Efeito de vidro fosco */
+        
+        /* Layout dos itens */
+        flex-direction: column; /* Itens em coluna */
+        justify-content: center; /* Centraliza verticalmente */
+        align-items: center; /* Centraliza horizontalmente */
+        gap: 30px; /* Espaço entre os links */
+
+        /* Animação de entrada e saída */
+        transform: translateX(100%); /* Começa escondido fora da tela à direita */
+        transition: transform 0.3s ease-in-out;
+    }
+
+    /* Quando o menu estiver aberto, ele volta para a tela */
+    .nav .menu1.open {
+        transform: translateX(0);
+    }
+    
+    /* Para o item de perfil não se comportar de forma estranha */
+    .menu1 .item-perfil .perfil-logado,
+    .menu1 .item-perfil .link-login {
+        flex-direction: column; /* Coloca a foto acima do nome */
+        text-align: center;
+    }
+   
+    .tituloBioEdu {
+        top: 24%;
+    }
+
+    .tituloBioEdu h1{
+        font-size: 50px;
+    }
+
+    .tituloBioEdu p{
+        font-size: 18px;
+    }
+
+    .contato img {
+        width: 12%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    header{
+        padding-inline: 10px;
+    }
+
+    .nav{
+        right: 0;
+    }
+    
+    .tituloBioEdu {
+        top: 12%;
+        margin-top: 4rem;
+    }
+
+    .tituloBioEdu h1{
+        font-size: 30px;
+    }
+
+    .tituloBioEdu p{
+        font-size: 12px;
+    }
+
+    footer {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .contato, .endereco, .politica {
+        margin-left: 3rem;
+        width: 70%;
+    }
+
+    .contato h4{
+        margin-left: 5rem;
+    }
+
+    .contato img {
+        width: 12%;
+    }
+
+    .politica h4{
+        margin-left: -1rem;
+        margin-top: 2rem;
+        margin-bottom: -0.5rem;
+    }
+
+    .politica p{ 
+        margin-left: -1rem;  
+        margin-top: 2rem;         
+    }
+}
+
+@media screen and (max-width: 400px) {
+    
+    header{
+        padding-inline: 10px;
+        margin-top: -1rem;
+    }
+
+    .nav{
+        right: 0;
+    }
+
+    .tituloBioEdu {
+        top: 7%;
+        width: 80%;
+    }
+
+    .tituloBioEdu h1{
+        font-size: 25px;
+    }
+
+    .tituloBioEdu p{
+        font-size: 10px;
+    }
+
+    .logo{
+        width: 22%;
+        margin-top: -0.5rem;
+    }
+}

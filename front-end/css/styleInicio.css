@@ -1,0 +1,809 @@
+@import url('https://fonts.cdnfonts.com/css/open-sauce-one');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sauce One", sans-serif;
+}
+
+body {
+    background-color: #F8F8F8;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+
+/*index*/
+
+
+/*header*/
+
+.banner img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/*menu1*/
+
+a {
+    text-decoration: none;
+}
+
+header{
+    padding-inline: 16px;
+    z-index: 10;
+    top: 40px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 10px;
+    z-index: 1000;
+}
+
+.logo{
+    width: 6rem;
+    z-index: 1;
+    top: 35px;
+    position: absolute;
+    left: 10px;
+}
+
+        /* Estilos para a Navegação Principal */
+        .nav {
+            display: flex;
+            justify-content: flex-end; /* Alinha itens à direita */
+            align-items: center;
+            gap: 20px;
+            position: relative;
+        }
+
+        .menu1 {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 20px;
+        }
+
+        .menu1 a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 5px;
+        }
+
+        /* Estilo base do botão (ícone de 3 linhas) */
+.hamburger {
+    display: none; /* Escondido por padrão em telas grandes */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001; /* Garante que o botão fique acima de outros elementos */
+}
+
+.hamburger span {
+    width: 2rem;
+    height: 0.25rem;
+    background: #ffffff; /* Cor das linhas do hambúrguer */
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+}
+
+/* Animação do botão para se tornar um "X" quando aberto */
+.hamburger.open span:nth-child(1) {
+    transform: rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(20px);
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+.link-login{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tituloBioEdu {
+    position: absolute;
+    color: white;
+    left: 4%;
+    top: 38%;
+    width: 50%;
+}
+
+.tituloBioEdu h1 {
+    font-family: "Russo One", sans-serif;
+    font-size: 100px;
+}
+
+.tituloBioEdu p {
+    font-size: 28px;
+}
+
+.btnMais {
+    margin-top: 3rem;
+    padding: 0.8rem 2rem 0.8rem 2rem;
+    background-color: #5271FF;
+    border: none;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Estilo do Overlay (camada de fundo) */
+.overlay {
+    display: none; /* Começa escondido */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fundo preto semi-transparente */
+    z-index: 999; /* Fica abaixo do menu, mas acima do resto do site */
+}
+
+.overlay.active {
+    display: block; /* Mostra o overlay quando o menu está ativo */
+}
+
+#conteudo1 h2 {
+    font-size: 50px;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.citacao {
+    text-align: center;
+    font-size: 25px;
+    margin-top: 3rem;
+}
+
+
+/*fim - main citação*/
+
+
+/*conteudo 2*/
+
+#conteudo2,
+.conteudo1_1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 100%;
+    min-width: 100%
+}
+
+.ladoImagem {
+    width: 50%;
+}
+
+.ladoTexto {
+    width: 50%;
+    padding-top: 8rem;
+    padding-left: 10rem;
+}
+
+.engrenagens {
+    padding-top: 5rem;
+    padding-left: 2rem;
+}
+
+.parag1 {
+    text-align: justify;
+    width: 60%;
+    line-height: 2.5rem;
+}
+
+
+/* fim conteudo 1*/
+
+
+/*conteudo 2*/
+
+.parag2 {
+    text-align: justify;
+    margin-right: 5rem;
+    line-height: 2.5rem;
+    margin-top: 5rem;
+}
+
+.ladoImagem2 {
+    margin-top: 5rem;
+    margin-left: 5rem;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.ladoImagem2 .lock {
+    width: 200px;
+    margin-left: 5rem;
+}
+
+.ladoImagem2 .alvo {
+    width: 250px;
+    margin-top: 5rem;
+    margin-left: 15rem;
+}
+
+.ladoTexto2 {
+    float: right;
+    width: 40%;
+    margin-right: 5rem;
+    margin-top: 1rem;
+}
+
+
+/*fim conteudo 2*/
+
+
+/*conteudo 3*/
+
+#conteudo3 {
+    display: inline-block;
+    margin-top: 6rem;
+}
+
+#conteudo3>h3 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.parag3 {
+    text-align: justify;
+    margin-right: 5rem;
+    line-height: 2.5rem;
+    margin-top: 5rem;
+}
+
+.ladoImagem3 {
+    margin-top: 5rem;
+    margin-right: 5rem;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.ladoImagem3 .tempo {
+    width: 160px;
+    margin-left: 10rem;
+}
+
+.ladoImagem3 .grafico {
+    width: 300px;
+    margin-left: 20rem;
+    margin-top: 1rem;
+}
+
+.ladoTexto3 {
+    float: left;
+    width: 40%;
+    margin-left: 10rem;
+    margin-top: 1rem;
+}
+
+
+/*fim conteudo 3*/
+
+
+/*conteudo 4*/
+
+#conteudo4 {
+    display: inline-block;
+    margin-top: 2rem;
+}
+
+.parceiros {
+    display: block;
+    margin-top: 2rem;
+    padding: 5rem;
+}
+
+.parceiros h3 {
+    font-size: 40px;
+    text-align: center;
+}
+
+.logoParc {
+    margin-top: 5rem;
+    display: flex;
+}
+
+.parc {
+    margin-left: 6.5rem;
+}
+
+.parc img {
+    width: 70%;
+}
+
+.parc p {
+    margin-left: 5.5rem;
+    margin-top: 1.5rem;
+    font-size: 20px;
+}
+
+
+/*fim conteudo 4*/
+
+
+/*fim - index*/
+
+/*rodape*/
+
+footer {
+    display: flex;
+    align-items: center;
+    background: rgb(1, 0, 13);
+    background: linear-gradient(90deg, rgba(1, 0, 13, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(55, 0, 255, 1) 100%);
+}
+
+.contato {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    color: white;
+    margin-left: 6rem;
+}
+
+.contato h4 {
+    margin-left: 5rem;
+    margin-top: 2rem;
+}
+
+.email,
+.telefone,
+.facebook,
+.instagram,
+.whatsapp {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.endereco {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    color: white;
+    text-align: center;
+    margin-right: 3rem;
+}
+
+.endereco h4 {
+    margin-bottom: 2.5rem;
+}
+
+.endereco p {
+    margin-bottom: 1rem;
+}
+
+.politica {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    color: white;
+    text-align: center;
+}
+
+.politica h4 {
+    margin-bottom: 3rem;
+}
+
+.politica p {
+    margin-bottom: 1rem;
+}
+/*fim rodape*/
+
+@media screen and (max-width: 1200px) {
+
+    .btnMais {
+        display: none;
+    }
+
+    .engrenagens {
+        margin-left: -10rem;
+    }
+
+    .ladoImagem2 .lock {
+        margin-top: 2rem;
+        margin-left: 15rem;
+    }
+
+    .ladoImagem2 .alvo {
+        margin-top: 8.5rem;
+        margin-left: 15rem;
+    }
+
+    .ladoImagem3 .grafico {
+        margin-top: 2rem;
+        margin-left: 3rem;
+    }
+
+    .ladoImagem3 .tempo {
+        margin-left: -1rem;
+    }
+
+    .parc p {
+        margin-left: 3.5rem;
+    }
+}
+
+@media screen and (max-width: 950px) {
+
+    .tituloBioEdu {
+        top: 50%;
+    }
+
+    .tituloBioEdu h1 {
+        font-size: 75px;
+    }
+
+    #conteudo1 h2 {
+        font-size: 43px;
+    }
+
+    .parag1 {
+        width: 100%;
+        line-height: 2rem;
+    }
+
+    .ladoTexto{
+        padding-left: 15rem;
+        width: 100%;
+        margin-left: 2rem;
+        margin-top: -2rem;
+    }
+
+    .ladoTexto2{
+        padding-left: 15rem;
+        width: 100%;
+        margin-left: -7rem;
+    }
+
+    .ladoTexto3{
+        padding-left: 18rem;
+        width: 100%;
+        margin-left: -7rem;
+    }
+
+    .engrenagens {
+        display: none;
+    }
+
+    .ladoImagem2 .lock {
+        display: none;
+    }
+
+    .ladoImagem2 .alvo {
+        display: none;
+    }
+
+    .ladoImagem3 .tempo {
+        display: none;
+    }
+
+    .ladoImagem3 .grafico {
+        display: none;
+    }
+
+    .parc {
+        margin-left: 5.5rem;
+    }
+
+    .parc p {
+        margin-left: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    /* Mostra o botão hambúrguer */
+    .hamburger {
+        display: flex !important;
+        position: fixed; /* Fixa o botão na tela */
+        top: 20px;
+        right: 20px;
+    }
+
+    /* Esconde o menu de navegação da forma tradicional */
+    .nav .menu1 {
+        /* Posicionamento e Estilo do Menu Mobile */
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh; /* Altura total da tela */
+        width: 60%; /* Largura do menu */
+        max-width: 250px;
+        background-color: rgba(15, 23, 42, 0.95); /* Fundo semi-transparente */
+        backdrop-filter: blur(5px); /* Efeito de vidro fosco */
+        
+        /* Layout dos itens */
+        flex-direction: column; /* Itens em coluna */
+        justify-content: center; /* Centraliza verticalmente */
+        align-items: center; /* Centraliza horizontalmente */
+        gap: 30px; /* Espaço entre os links */
+
+        /* Animação de entrada e saída */
+        transform: translateX(100%); /* Começa escondido fora da tela à direita */
+        transition: transform 0.3s ease-in-out;
+    }
+
+    /* Quando o menu estiver aberto, ele volta para a tela */
+    .nav .menu1.open {
+        transform: translateX(0);
+    }
+    
+    /* Para o item de perfil não se comportar de forma estranha */
+    .menu1 .item-perfil .perfil-logado,
+    .menu1 .item-perfil .link-login {
+        flex-direction: column; /* Coloca a foto acima do nome */
+        text-align: center;
+    }
+
+    .tituloBioEdu{
+        margin-top: -2rem;
+    }
+
+    header{
+        padding-inline: 10px;
+    }
+
+
+    #conteudo1, #conteudo2, #conteudo3, #conteudo4{
+        display: block;
+    }
+
+
+    .ladoTexto{
+        padding-left: 15rem;
+        width: 100%;
+        margin-left: -7rem;
+        margin-top: -2rem;
+    }
+
+    .ladoTexto2{
+        padding-left: 15rem;
+        width: 100%;
+        margin-left: -7rem;
+    }
+
+    .ladoTexto3{
+        padding-left: 18rem;
+        width: 100%;
+        margin-left: -7rem;
+    }
+
+    .ladoImagem .engrenagens {
+        display: none;
+    }
+
+    .ladoImagem2 .lock {
+        display: none;
+    }
+
+    .ladoImagem2 .alvo {
+        display: none;
+    }
+
+    .ladoImagem3 .tempo {
+        display: none;
+    }
+
+    .ladoImagem3 .grafico {
+        display: none;
+    }
+
+    .contato {
+        margin-left: 2rem;
+    }
+
+    .contato img {
+        width: 8%;
+    }
+
+    .parc {
+        margin-left: 5.5rem;
+    }
+
+    .parc img {
+        margin-left: -2rem;
+        width: 100%;
+    }
+
+    .parc p {
+        margin-left: -0.5rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .tituloBioEdu{
+        margin-top: -2rem;
+    }
+
+    header{
+        padding-inline: 10px;
+    }
+
+    .logo {
+        position: static;
+        width: 4rem;
+    }
+
+
+    .tituloBioEdu {
+        top: 18%;
+    }
+
+    .tituloBioEdu h1 {
+        font-size: 36px;
+        margin-top: 3rem;
+    }
+
+    .tituloBioEdu p {
+        font-size: 16px;
+    }
+
+    #conteudo1 h2 {
+        margin-left: 1rem;
+        font-size: 30px;
+    }
+
+    .citacao {
+        margin: 2rem 1rem 2rem 1rem;
+        font-size: 18px;
+    }
+
+    #conteudo2 {
+        flex-direction: column;
+        width: 100%;
+        margin-left: 2rem;
+        display: none;
+    }
+
+    .engrenagens {
+        display: none;
+    }
+
+    #conteudo2{
+        display: block;
+        width: 100%;
+        margin: 0;
+        margin-top: 1rem;
+        display: none;
+    }
+
+    .ladoTexto{
+        width: 100%;
+        padding: 10px;
+    }
+
+    #conteudo3{
+        display: flex;
+        margin-top: 43rem;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .ladoTexto2{
+        float: none;
+        width: 100%;
+        padding-left: 5rem;
+        margin-right: 0;
+        margin-left: 0;
+        margin-top: -2rem;
+    }
+
+    #conteudo4{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .ladoTexto3{
+        float: none;
+        margin-left: 0;
+        margin-top: -5rem;
+        width: 100%;
+        padding-left: 5rem;
+    }
+
+    #conteudo3>h3 {
+        font-size: 35px;
+        margin-top: -40rem;
+    }
+
+    .ladoImagem2 .lock {
+        display: none;
+    }
+
+    .ladoImagem2 .alvo {
+        display: none;
+    }
+
+
+    .ladoImagem3 .tempo {
+        display: none;
+    }
+
+    .ladoImagem3 .grafico {
+        display: none;
+    }
+
+    .logoParc {
+        margin-top: 1.5rem;
+    }
+
+    .parceiros{
+        margin-top: -5rem;
+    }
+
+    .parc {
+        margin-top: 2rem;
+        margin-left: 0.1rem;
+    }
+
+    .parc img {
+        margin-left: 0.5rem;
+        width: 100%;
+    }
+
+    .parc p {
+        margin-left: 1.5rem;
+        margin-top: 0.5rem;
+        font-size: 15px;
+    }
+
+    footer {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .contato, .endereco, .politica {
+        margin-left: 3rem;
+        width: 70%;
+    }
+
+    .contato h4{
+        margin-left: 4rem;
+    }
+
+    .contato img {
+        width: 12%;
+    }
+
+    .politica h4{
+        margin-left: -1rem;
+        margin-top: 2rem;
+        margin-bottom: -0.5rem;
+    }
+
+    .politica p{ 
+        margin-left: -1rem;  
+        margin-top: 2rem;         
+    }
+}
+
