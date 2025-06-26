@@ -175,7 +175,12 @@ tbody tr:hover {
     border-radius: 12px;
  }
 .btn-save { background-color: var(--success-green); }
-.btn-delete { background-color: var(--danger-red); }
+.btn-delete { 
+    background-color: var(--danger-red); 
+    padding: 4px 10px;
+    border-radius: 12px;
+    text-decoration: none;
+}
 .btn-back { 
     background-color: #6c757d; 
     text-decoration: none;
