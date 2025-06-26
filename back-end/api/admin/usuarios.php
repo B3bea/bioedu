@@ -1,5 +1,5 @@
 <?php
-// ... (código que já existe)
+
 require_once 'header_admin.php';
 require_once '../database/config.php';
 
@@ -94,6 +94,7 @@ $lista_usuarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <td><?php echo $usuario['data_fim'] ? date('d/m/Y', strtotime($usuario['data_fim'])) : 'N/A'; ?></td>
                     <td>
                         <a href="gerenciar_assinatura.php?id=<?php echo $usuario['id_usuario']; ?>" class="btn-edit">Gerenciar</a>
+                        <a href="excluir_usuario.php?id=<?php echo $usuario['id_usuario']; ?>" class="btn-delete" onclick="return confirm('Tem certeza que deseja excluir este usuário?');">Excluir</a>
                     </td>
                 </tr>
             <?php endforeach; ?>
