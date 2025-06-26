@@ -1,6 +1,33 @@
 <?php
-require_once 'header_admin.php'; // Inclui o header e o gatekeeper
-require_once '../database/config.php'; // Inclui a conexão com o banco
+// ... (código que já existe)
+require_once 'header_admin.php';
+require_once '../database/config.php';
+
+// --- NOVO: Bloco para exibir alertas ---
+$alert_message = '';
+$alert_type = '';
+
+if (isset($_GET['status'])) {
+    switch ($_GET['status']) {
+        case 'delete_success':
+            $alert_message = 'Usuário excluído com sucesso!';
+            $alert_type = 'success';
+            break;
+        case 'erro_autodelete':
+            $alert_message = '<strong>Erro:</strong> Você não pode excluir sua própria conta de administrador.';
+            $alert_type = 'danger';
+            break;
+        case 'id_invalido':
+        case 'user_not_found':
+            $alert_message = '<strong>Erro:</strong> Usuário não encontrado ou ID inválido.';
+            $alert_type = 'danger';
+            break;
+        case 'delete_error':
+            $alert_message = '<strong>Erro:</strong> Não foi possível excluir o usuário. Tente novamente.';
+            $alert_type = 'danger';
+            break;
+    }
+}
 
 // Consulta com LEFT JOIN para buscar todos os usuários e suas assinaturas ATIVAS
 $sql = "
@@ -28,6 +55,12 @@ $lista_usuarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <div class="page-header">
     <h1>Gerenciar Usuários e Planos</h1>
 </div>
+
+<?php if ($alert_message): ?>
+    <div class="alert alert-<?php echo $alert_type; ?>">
+        <?php echo $alert_message; ?>
+    </div>
+<?php endif; ?>
 
 <div class="page-content">
     <table>
