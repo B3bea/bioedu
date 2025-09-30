@@ -40,6 +40,8 @@ if (!$usuario) {
     exit();
 }
 
+$temPlanoAtivo = !empty($usuario['nome_do_plano']) && $usuario['status_da_assinatura'] === 'ativa';
+
 // Define o caminho da foto ou usa uma padrão
 $caminhoFoto = $usuario['foto_perfil'] ? $usuario['foto_perfil'] : 'https://via.placeholder.com/200';
 ?>
@@ -320,6 +322,10 @@ $caminhoFoto = $usuario['foto_perfil'] ? $usuario['foto_perfil'] : 'https://via.
                 <nav class="tabs-nav">
                     <button class="tab-link active" data-tab="info-pessoais"><i class="fas fa-user-edit"></i> Informações</button>
                     <button class="tab-link" data-tab="meus-planos"><i class="fas fa-gem"></i> Meus Planos</button>
+
+                    <?php if ($temPlanoAtivo): ?>
+                        <button class="tab-link" data-tab="gerenciar-turmas"><i class="fas fa-users"></i>Gerenciar Turmas</button>
+                    <?php endif; ?>
                     <a href="logout.php" class="tab-link"><i class="fas fa-sign-out-alt"></i> Sair</a>
                 </nav>
 
@@ -346,7 +352,7 @@ $caminhoFoto = $usuario['foto_perfil'] ? $usuario['foto_perfil'] : 'https://via.
                         </form>
                     </div>
 
-                <div id="meus-planos" class="tab-pane">
+            <div id="meus-planos" class="tab-pane">
 
             <?php
             // A nova verificação: checa se a consulta retornou um nome de plano.
@@ -368,6 +374,29 @@ $caminhoFoto = $usuario['foto_perfil'] ? $usuario['foto_perfil'] : 'https://via.
                         Cancelar Plano
                     </a>
                 </div>
+    
+    <?php if ($temPlanoAtivo): ?>
+        <div id="gerenciar-turmas" class="tab-pane">
+            <h3>Importar Dados</h3>
+            <p>Faça o upload das suas planilhas para cadastrar alunos, professores e turmas.</p>
+
+            <form action="upload_api.php" method="post" enctype="multipart/form-data" style="margin-top: 2rem;">
+                <div class="form-data">
+                    <label for="arquivo_alunos">
+                        <i class="fas fa-user-graduate"></i> Planilha de Alunos
+                    </label>
+                    <input type="file" id="arquivo_alunos" name="arquivo_alunos" accept=".xlsx, .xls, .csv" required>
+                    <input type="hidden" name="tipo-importacao" value="alunos">
+                </div>
+
+                <button type="submit" class="btn-submit">Importar Alunos</button>
+            </form>
+
+            <div id="upload-feedback" style="margin-top: 1.5rem; padding: 1rem; border-radius: 6px; display: none;"></div>
+
+        </div>
+    <?php endif; ?>
+
     <?php
     // Se a consulta não retornou um nome de plano, ele não tem assinatura ativa.
     else:
@@ -392,7 +421,6 @@ $caminhoFoto = $usuario['foto_perfil'] ? $usuario['foto_perfil'] : 'https://via.
     // JAVASCRIPT PARA FUNCIONALIDADE DA PÁGINA
     document.addEventListener('DOMContentLoaded', function () {
         
-        // --- CÓDIGO DAS ABAS (que você já tinha) ---
         const tabLinks = document.querySelectorAll('.tab-link');
         const tabPanes = document.querySelectorAll('.tab-pane');
 
@@ -407,7 +435,6 @@ $caminhoFoto = $usuario['foto_perfil'] ? $usuario['foto_perfil'] : 'https://via.
             });
         });
 
-        // --- NOVO: CÓDIGO PARA UPLOAD DA FOTO ---
         const fileInput = document.getElementById('foto_perfil');
         const imagePreview = document.getElementById('profile-image-preview');
         const savePhotoButton = document.getElementById('save-photo-btn');
@@ -432,11 +459,6 @@ $caminhoFoto = $usuario['foto_perfil'] ? $usuario['foto_perfil'] : 'https://via.
 </script>
 </main>
 
-<script>
-// JAVASCRIPT PARA FUNCIONALIDADE DA PÁGINA
-// ... seu script de abas e upload de foto ...
-</script>
-
 <?php
     // Verifica se existe um 'status' na URL, vindo do redirecionamento
     if (isset($_GET['status'])) {
@@ -456,18 +478,18 @@ $caminhoFoto = $usuario['foto_perfil'] ? $usuario['foto_perfil'] : 'https://via.
             $mensagem_erro_formatada = json_encode('Erro: ' . $msg);
             echo 'alert(' . $mensagem_erro_formatada . ');';
 
-        // ----- INÍCIO DA ADIÇÃO -----
+
         } elseif ($status === 'plano_sucesso') {
             echo 'alert("Plano ativado com sucesso! Bem-vindo(a) ao BIOEDU Premium!");';
         } elseif ($status === 'plano_cancelado') {
             echo 'alert("Seu plano foi cancelado com sucesso.");';
         }
-        // ----- FIM DA ADIÇÃO -----
+
 
         // Limpa a URL para que o alerta não apareça novamente se o usuário recarregar a página
         echo 'window.history.replaceState(null, null, window.location.pathname);';
 
-        // Fecha a tag de script
+
         echo '</script>';
     }
 ?>
