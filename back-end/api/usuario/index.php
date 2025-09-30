@@ -1,8 +1,7 @@
 <?php
 // Inicia a sessão para verificar se o usuário está logado
 session_start();
-require_once '../database/config.php'; // ATENÇÃO: Verifique se este caminho está correto a partir do seu index.php
-
+require_once '../database/config.php'; 
 $usuarioLogado = false; // Começamos assumindo que o usuário NÃO está logado
 
 // Se existir um user_id na sessão, significa que ele está logado
